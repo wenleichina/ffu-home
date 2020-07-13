@@ -1,0 +1,54 @@
+spring:
+  profiles:
+    active:
+      - dev
+  cache:
+    ehcache:
+      config: classpath:cache/ehcache.xml
+  datasource:
+    platform: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ffuhome?useUnicode=true&characterEncoding=utf-8&useSSL=true&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 20
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      force-request: true
+      force-response: true
+  thymeleaf:
+    cache: true
+
+server:
+  port: 8083
+  ssl:
+    enabled: false
+  http2:
+    enabled: false
+  max-http-header-size: 8KB
+  undertow:
+    accesslog:
+      enabled: true
+      dir: ../logs/ffu/home/undertow
+      pattern: combined
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: com.funzuqiu.ffu.home.modules.**.entity
+
+logging:
+  config: classpath:log/logback-spring.xml
+
+sms:
+  log:
+    enabled: true
+    name: smslog
+
+my:
+  userfiles-basedir: /deploy/nas/ffu/home/
+  pageSize: 15

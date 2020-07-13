@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout/blank :: rapid(rapid_head=~{::head}, rapid_content=~{::body})">
+<head>
+    <title>泛足联</title>
+    <style>
+        .contact-title {
+            font-family: "Open Sans",sans-serif;
+            font-size: 16px;
+            color: #666;
+        }
+        .contact-remark {
+            font-family: "Open Sans",sans-serif;
+            font-size: 12px;
+            color: #7d8386;
+        }
+        .kf_contct_thumb:hover .contact-title,
+        .kf_contct_thumb:hover .contact-remark {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!--Inner Banner Start-->
+    <div class="innner_banner">
+        <div class="container" style="display: flex;flex-direction: row;align-items: center;">
+            <img src="/images/apple-touch-icon.png" alt="" style="width: 32px;height: 32px;margin-right: 12px;">
+            <h3>泛足联</h3>
+        </div>
+    </div>
+    <!--Inner Banner End-->
+    
+    <!--Inner Banner End-->
+    <div class="kode_content_wrap">
+        <section class="contact_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <!--Kf News Dec2 Start-->
+                        <div class="kf_news_dec2 my-news">
+                            <article>
+                                <div class="content clearfix" style="margin-top: 0;">
+                                    <p style="text-align:justify;">泛足联，全称泛足球社会赛事联盟，是由泛足球及全国球场会员共同打造的一个足球赛事联盟。泛足联于2020年6月10日成立，旗下主要业务为泛足联全国大赛。公司致力于扩大足球群众基础，夯实足球赛事塔基。打造规模影响力最大的全国赛事，为大家提供一个出城跨省跨国比赛交流的平台。</p>
+                                    <p style="text-align:justify;">&nbsp;</p>
+                                    <p style="text-align:justify;"><img src="/upload/aboutus/aboutus.png"></p>
+                                </div>
+                            </article>
+                        </div>
+                        <!--Kf News Dec2 End-->
+                        
+                        <!--Contact  Thumb Start-->
+                        <div class="kf_contct_thumb">
+                            <h5 class="kf_hd8">咨询联系方式</h5>
+                            <div class="text contact-list">
+                                <span class="contact-title">南部：135 2121 0725 杨超杰</span><br>
+                                <span class="contact-remark">福建、浙江、江苏、上海、安徽、湖北、湖南、江西、广东</span>
+                                <hr>
+                                
+                                <span class="contact-title">西北：156 3197 9272 王安玮</span><br>
+                                <span class="contact-remark">河北、陕西、山西、内蒙古、甘肃、宁夏、河南</span>
+                                <hr>
+                                
+                                <span class="contact-title">东部：176 0058 0110 刘博</span><br>
+                                <span class="contact-remark">天津、黑龙江、吉林、辽宁、北京、山东</span>
+                                <hr>
+                                
+                                <span class="contact-title">西南：139 8232 3984 方艺华</span><br>
+                                <span class="contact-remark">四川、重庆、云南、贵州、广西</span>
+                            </div>
+                        </div>
+                        <!--Contact  Thumb End-->
+                        
+                        <div th:if="${session.ffu_application == null}" class="kf_form" style="padding-left: 15px;padding:right: 15px;">
+                            <div class="kf_form_hd">
+                                <h3 style="font-size: 16px;">泛足联会员注册</h3>
+                                <p style="font-size: 14px;">请填写注册信息，我们将在之后与您取得联系</p>
+                            </div>
+                            <form id="form-edit">
+                                <div class="input_dec">
+                                    <input id="stadium" placeholder="场馆名称" type="text">
+                                </div>
+                                <div class="input_dec">
+                                    <input id="address" placeholder="详细地址" type="text">
+                                </div>
+                                <div class="input_dec">
+                                    <input id="league" placeholder="主办赛事" type="text">
+                                </div>
+                                <div class="input_dec">
+                                    <input id="realname" placeholder="负责人姓名" type="text">
+                                </div>
+                                <div class="input_dec">
+                                    <input id="phone" placeholder="联系电话（手机）" type="text">
+                                </div>
+                                <div class="input_dec">
+                                    <div class="input-group">
+                                        <input id="code" placeholder="验证码" type="text">
+                                        <span id="btn-code" class="input-group-addon" style="cursor: pointer;" onclick="getCode()">获取验证码</span>
+                                    </div>
+                                </div>
+                                <input class="input-btn" type="button" value="注册" onclick="save()">
+                            </form>
+                        </div>
+                        
+                        <div th:if="${session.ffu_application != null}" class="kf_form">
+                            <div class="kf_form_hd">
+                                <h3>您的注册信息正在处理中</h3>
+                                <p>我们将在之后与您取得联系</p>
+                            </div>
+                            <form>
+                                <div class="input_dec">
+                                    <label>场馆名称</label><span>[[${session.ffu_application.stadium}]]</span>
+                                </div>
+                                <div class="input_dec">
+                                    <label>详细地址</label><span>[[${session.ffu_application.address}]]</span>
+                                </div>
+                                <div class="input_dec">
+                                    <label>主办赛事</label><span>[[${session.ffu_application.league}]]</span>
+                                </div>
+                                <div class="input_dec">
+                                    <label>负责人姓名</label><span>[[${session.ffu_application.realname}]]</span>
+                                </div>
+                                <div class="input_dec">
+                                    <label>联系电话</label><span>[[${session.ffu_application.phone}]]</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--Main Content Wrap End-->
+    
+    <!--Footer Wrap Start-->
+    <footer class="kode_footer_2 my-footer">
+        <div class="container">
+            <!-- <span class="go-up">
+                <i class="fa fa-angle-up"></i>
+            </span> -->
+            <div class="row">
+                <div class="col-md-3">
+                    <!--Widget Text Start-->
+                    <div class="widget widget_text">
+                        <div class="logo">
+                            <a href="javascript:void(0)"><img src="/images/logo-gray.png" alt=""></a>
+                        </div>
+                        <p>星火燎原体育文化（北京）有限公司</p>
+                        <ul class="kf_contact_meta">
+                            <li>
+                                <span class="icon-mail"></span>
+                                <p>fun@funzuqiu.com</p>
+                            </li>
+                            <li>
+                                <span class="icon-technology"></span>
+                                <p style="font-size: 14px;">赛事咨询：131 2033 8495 寇驰波</p>
+                            </li>
+                            <li>
+                                <span class="icon-technology"></span>
+                                <p style="font-size: 14px;">商务咨询：132 6016 0730 侯昭</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Widget Text End-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer Wrap End-->
+    <!--Copy Right Wrap Start-->
+    <div class="copy_right3">
+        <div class="container">
+            <p>
+                Copyright © 2020 <a href="http://funzuqiu.com" target="_blank" class="text-white">Funzuqiu.com</a>
+                <a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow" class="text-white">京ICP备15057056号-1</a>
+            </p>
+        </div>
+    </div>
+    <!--Copy Right Wrap End-->
+</div>
+
+<script>
+    const regPhone = /^0?1[3|4|5|7|8][0-9]\d{8}$/
+    let canGetCode = true
+    let countDown = 60
+    let cd = null
+	
+    function getCode() {
+    	if (!canGetCode) {
+    		return
+    	}
+    	
+        let phone = $('#phone').val()
+        if (!regPhone.test(phone)) {
+        	return validationError('请填写正确手机号码')
+        }
+
+        canGetCode = false
+        countDown = 60
+        cd = setInterval(() => {
+            if (countDown > 0) {
+                $('#btn-code').text((countDown--) + '秒')
+            } else {
+                clearInterval(cd)
+                canGetCode = true
+                $('#btn-code').text('获取验证码')
+            }
+        }, 1000)
+
+        $.ajax({
+            url: '/ffu/join/code?phone=' + phone,
+            type: 'GET',
+            success: function(result) {
+                if (result.code == 0) {
+                	alert('验证码已发送')
+                } else {
+                    alert(result.message)
+                }
+            }
+        })
+    }
+    		
+    function disableBtns() {
+    	$('#form-edit .input-btn').each(function() {
+            $(this).attr('disabled', true)
+        })
+    }
+    
+    function enableBtns() {
+    	$('#form-edit .input-btn').each(function() {
+            $(this).removeAttr('disabled')
+        })
+    }
+    
+    function validationError(msg) {
+    	alert(msg)
+		enableBtns()
+		return false
+    }
+    		
+    function save() {
+    	disableBtns()
+    	
+		let stadium = $('#stadium').val()
+		if (stadium == '') {
+			return validationError('请填写场馆名称')
+		}
+		
+		let address = $('#address').val()
+		if (address == '') {
+			return validationError('请填写详细地址')
+        }
+		
+		let league = $('#league').val()
+		if (league == '') {
+			return validationError('请填写主办赛事')
+        }
+		
+		let realname = $('#realname').val()
+		if (realname == '') {
+			return validationError('请填写负责人姓名')
+        }
+		
+		let phone = $('#phone').val()
+		if (phone == '') {
+			return validationError('请填写联系电话')
+        }
+		if (!regPhone.test(phone)) {
+			return validationError('请填写正确手机号码')
+		}
+		
+		let code = $('#code').val()
+		if (code == '') {
+			return validationError('请输入验证码')
+        }
+		
+		$.ajax({
+            url: '/ffu/join',
+            type: 'POST',
+            data: {
+            	channel: 'soccerbigbang',
+            	stadium: stadium,
+            	address: address,
+            	league: league,
+            	realname: realname,
+            	phone: phone
+            },
+            success: function(result) {
+                if (result.code == 0) {
+                    location.reload()
+                } else {
+                	return validationError(result.message)
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>

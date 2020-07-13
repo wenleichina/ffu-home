@@ -1,0 +1,612 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout/default :: rapid(rapid_head=~{::head}, rapid_content=~{::body})">
+<head>
+    <title>全国大赛</title>
+    <style>
+        .widget_ranking .team_logo span {
+		    width: 21px;
+		    height: 25px;
+		    float: left;
+		}
+    </style>
+</head>
+<body>
+    <!--Inner Banner Start-->
+    <div class="innner_banner">
+        <div class="container">
+            <h3>全国大赛</h3>
+            <!-- <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">blog</a></li>
+                <li class="active"><span>blog grid 2</span></li>
+            </ul> -->
+        </div>
+    </div>
+    <!--Inner Banner End-->
+
+    <!--sub nav bar-->
+    <div class="my-sub-nav kode_content_wrap">
+        <div class="container">
+            <!-- <span class="title">赛事介绍</span> -->
+            <ul class="nav">
+                <li><a href="/league/quanguodasai/introduce">简介</a></li>
+                <li class="active"><a href="/league/quanguodasai/data">数据</a></li>
+                <li><a href="/league/quanguodasai/collection">精彩集锦</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="kode_content_wrap">
+        <section class="kf_blog2">
+            <div class="container">
+                <!--Featured 3 Slider Start-->
+                <div class="kf_featured_wrap3">
+                    <div class="row">
+                        <div class="col-md-9 col-sm-9">
+                            <div class="kf_overview kf_current_match_wrap">
+                                <!--Heading 1 Start-->
+                                <h6 class="kf_hd1 margin_0">
+                                    <span>全国总决赛</span>
+                                    <!-- <a class="prv_btn" href="#">Check Previous Result</a> -->
+                                </h6>
+                                <!--Heading 1 End-->
+                                <!--Kf Opponents Outer Start-->
+                                <div class="kf_opponents_outerwrap">
+                                    <h6 class="kf_h4">
+                                        <span>FCL Championship final</span>
+                                        <em>Saturday, June 8th 2019</em>
+                                    </h6>
+                                    <!--Kf Opponents Start-->
+                                    <div class="kf_opponents_wrap">
+                                        <div class="kf_opponents_dec">
+                                            <span><img src="/upload/team/f0d07f1b6359459cb4eb758383abba8d.png" alt=""></span>
+                                            <div class="text">
+                                                <h6><a href="#">精神糖足球俱乐部</a></h6>
+                                                <!-- <p>ElR bros school</p> -->
+                                            </div>
+                                        </div>
+                                        <div class="kf_opponents_gols">
+                                            <h5><span>3</span> - <span>1</span></h5>
+                                            <p>Final score</p>
+                                        </div>
+                                        <div class="kf_opponents_dec span_right">
+                                            <span><img src="/upload/team/498fed517406465587d0a28c3d214d94.png" alt=""></span>
+                                            <div class="text">
+                                                <h6><a href="#">重庆爱奇艺</a></h6>
+                                                <!-- <p>ElR bros school</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Kf Opponents End-->
+                                </div>
+                                <!--Kf Opponents Outer End-->
+                            </div>
+
+                            <!--Widget Player Start-->
+                            <div class="widget widget_player kf_overview">
+                                <!--Heading 1 Start-->
+                                <h6 class="kf_hd1">
+                                    <span>半决赛</span>
+                                </h6>
+                                <!--Heading 1 END-->
+                                <div class="kf_border">
+                                    <ul>
+                                        <li>
+                                            <!-- <span class="date_2">Saturday, 24th August</span> -->
+                                            <div class="kf_opponents_wrap">
+                                                <div class="kf_opponents_dec">
+                                                    <span><img src="/upload/team/498fed517406465587d0a28c3d214d94.png" alt=""></span>
+                                                    <div class="text">
+                                                        <h6><a href="#">重庆爱奇艺</a></h6>
+                                                        <!-- <p>Beboop institute</p> -->
+                                                    </div>
+                                                </div>
+                                                <div class="kf_opponents_gols">
+                                                    <h5><span>0</span> - <span>0</span></h5>
+                                                    <p>( 5 - 4 )</p>
+                                                </div>
+                                                <div class="kf_opponents_dec span_right">
+                                                    <span><img src="/upload/team/c417cf2830cb406cae5aaa3d64849e5c.png" alt=""></span>
+                                                    <div class="text">
+                                                        <h6><a href="#">重庆清风峡足球俱乐部</a></h6>
+                                                        <!-- <p>Saffron institute</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <!-- <span class="date_2">Saturday, 24th August</span> -->
+                                            <div class="kf_opponents_wrap">
+                                                <div class="kf_opponents_dec">
+                                                    <span><img src="/upload/team/7df1bdc1d55b49fc933b7c230f3ff141.png" alt=""></span>
+                                                    <div class="text">
+                                                        <h6><a href="#">南京FC</a></h6>
+                                                        <!-- <p>Beboop institute</p> -->
+                                                    </div>
+                                                </div>
+                                                <div class="kf_opponents_gols">
+                                                    <h5><span>4</span> - <span>5</span></h5>
+                                                    <p></p>
+                                                </div>
+                                                <div class="kf_opponents_dec span_right">
+                                                    <span><img src="/upload/team/f0d07f1b6359459cb4eb758383abba8d.png" alt=""></span>
+                                                    <div class="text">
+                                                        <h6><a href="#">精神糖足球俱乐部</a></h6>
+                                                        <!-- <p>Saffron institute</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- <li>
+                                            <a class="btn_3" href="#">See Full Result</a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Widget Player End-->
+
+                            <!--Widget League Table Start-->
+                            <div class="widget widget_ranking widget_league_table kf_overview">
+                                <!--Heading 1 Start-->
+                                <h6 class="kf_hd1">
+                                    <span>小组赛 A 组积分</span>
+                                </h6>
+                                <!--Heading 1 END-->
+                                <div class="kf_border">
+                                    <!--Table Wrap Start-->
+                                    <ul class="kf_table my-data-table">
+                                        <li class="table_head">
+                                            <div class="team_name">
+                                                <strong class="my-responsive-hide">排名</strong>
+                                            </div>
+                                            <div class="team_logo">
+                                                <strong>球队</strong>
+                                            </div>
+                                            <div class="match_loss my-responsive-hide">
+                                                <strong>场次</strong>
+                                            </div>
+                                            <div class="match_win">
+                                                <strong>胜</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong>平</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong>负</strong>
+                                            </div>
+                                            <div class="team_gb my-responsive-hide">
+                                                <strong>进球</strong>
+                                            </div>
+                                            <div class="team_gb my-responsive-hide">
+                                                <strong>失球</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong class="my-responsive-hide">净胜球</strong>
+                                                <strong class="my-responsive-abbr">+/-</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong>积分</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/7df1bdc1d55b49fc933b7c230f3ff141.png" alt=""></span>
+                                                <a href="#">南京FC</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>6</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>5</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>10</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/c417cf2830cb406cae5aaa3d64849e5c.png" alt=""></span>
+                                                <a href="#">重庆清风峡足球俱乐部</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>7</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>5</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>8</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/c44b0d572b0c4ab38e94c777b03eeab3.jpg" alt=""></span>
+                                                <a href="#">叶阿梅足球俱乐部</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>-1</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>4</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/b394755fc97a4318a29e4d285ce2c77d.png" alt=""></span>
+                                                <a href="#">南京江平学区房</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>3</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>5</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/8151e88408dd46ec873d1247513e99ca_256x256.png" alt=""></span>
+                                                <a href="#">踢呗Xian</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>12</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>-9</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>3</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Widget League Table End-->
+
+                            <!--Widget League Table Start-->
+                            <div class="widget widget_ranking widget_league_table kf_overview">
+                                <!--Heading 1 Start-->
+                                <h6 class="kf_hd1">
+                                    <span>小组赛 B 组积分</span>
+                                </h6>
+                                <!--Heading 1 END-->
+                                <div class="kf_border">
+                                    <!--Table Wrap Start-->
+                                    <ul class="kf_table my-data-table">
+                                        <li class="table_head">
+                                            <div class="team_name">
+                                                <strong class="my-responsive-hide">排名</strong>
+                                            </div>
+                                            <div class="team_logo">
+                                                <strong>球队</strong>
+                                            </div>
+                                            <div class="match_loss my-responsive-hide">
+                                                <strong>场次</strong>
+                                            </div>
+                                            <div class="match_win">
+                                                <strong>胜</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong>平</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong>负</strong>
+                                            </div>
+                                            <div class="team_gb my-responsive-hide">
+                                                <strong>进球</strong>
+                                            </div>
+                                            <div class="team_gb my-responsive-hide">
+                                                <strong>失球</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong class="my-responsive-hide">净胜球</strong>
+                                                <strong class="my-responsive-abbr">+/-</strong>
+                                            </div>
+                                            <div class="team_gb">
+                                                <strong>积分</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/498fed517406465587d0a28c3d214d94.png" alt=""></span>
+                                                <a href="#">重庆爱奇艺</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>9</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>9</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>10</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/f0d07f1b6359459cb4eb758383abba8d.png" alt=""></span>
+                                                <a href="#">精神糖足球俱乐部</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>7</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>7</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>8</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/8299a3f097bf47389439b941ed977926.png" alt=""></span>
+                                                <a href="#">西安皇马</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>5</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/69d8df1144ac46d88ed10b01df7bcfcd.png" alt=""></span>
+                                                <a href="#">成都皇马球迷队</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>11</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>-8</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>2</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table_no">
+                                                <span>5</span>
+                                            </div>
+                                            <div class="team_logo">
+                                                <span><img src="/upload/team/3441918d9b15460b8347d778544d5a3c.jpg" alt=""></span>
+                                                <a href="#">山东AC米兰</a>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>0</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="match_win my-responsive-hide">
+                                                <span>10</span>
+                                            </div>
+                                            <div class="match_win">
+                                                <span>-8</span>
+                                            </div>
+                                            <div class="team_point">
+                                                <span>1</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!--Table Wrap End-->
+                                </div>
+                            </div>
+                            <!--Widget League Table End-->
+                        </div>
+
+                        <div class="col-md-3 col-sm-3">
+                            <!--Widget Slider Start-->
+                            <div class="widget widget_slider">
+                                <!--Heading 1 Start-->
+                                <h6 class="kf_hd1 winner">
+                                    <span>全国总冠军</span>
+                                </h6>
+                                <!--Heading 1 END-->
+                                <div class="kf_border">
+                                    <!--Slider Widget Strat-->
+                                    <div class="slider_widget">
+                                        <div>
+                                            <div class="slider_thumb">
+                                                <figure>
+                                                    <img src="/extra-images/widget_slide1.png" alt="">
+                                                </figure>
+                                                <div class="text">
+                                                    <h6><a href="#">精神糖足球俱乐部</a></h6>
+                                                    <span>JUNE 2019</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Slider Widget END-->
+                                </div>
+                            </div>
+                            <!--Widget Slider End-->
+                        </div>
+                    </div>
+                </div>
+                <!--Featured 3 Slider End-->
+            </div>
+        </section>
+    </div>
+    <!--Main Content Wrap End-->
+</body>
+</html>

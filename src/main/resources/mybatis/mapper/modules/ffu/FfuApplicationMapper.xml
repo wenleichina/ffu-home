@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funzuqiu.ffu.home.modules.ffu.mapper.FfuApplicationMapper">
+    <sql id="baseColumns">
+    	t.id,
+		t.phone,
+		t.stadium,
+		t.address,
+		t.league,
+		t.realname,
+		t.state,
+		t.remark
+    </sql>
+    
+    <sql id="baseJoins">
+    </sql>
+	
+	<select id="getByPhone" resultType="FfuApplication">
+		SELECT
+			<include refid="baseColumns"/>
+		FROM ffu_application t
+		<include refid="baseJoins"/>
+		WHERE t.phone = #{phone}
+		LIMIT 1
+	</select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO ffu_application (
+            phone,
+            stadium,
+            address,
+            league,
+            realname,
+            state,
+            channel
+        ) VALUES (
+            #{phone},
+            #{stadium},
+            #{address},
+            #{league},
+            #{realname},
+            #{state},
+            #{channel}
+        )
+    </insert>
+
+	<update id="update">
+	    UPDATE ffu_application
+	    <set>
+            phone = #{phone},
+	        stadium = #{stadium},
+            address = #{address},
+            league = #{league},
+            realname = #{realname},
+            state = #{state},
+	    </set>
+	     WHERE id = #{id}
+	</update>
+</mapper>
